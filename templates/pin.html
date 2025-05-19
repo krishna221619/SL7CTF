@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PIN Access</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f0f0f;
+            color: #f2f2f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        .box {
+            background-color: #1a1a1a;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 170, 0.2);
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 0.7em;
+            border: none;
+            margin-top: 1em;
+            border-radius: 6px;
+            background: #222;
+            color: #fff;
+        }
+        
+        button {
+            margin-top: 1em;
+            padding: 0.6em 1.2em;
+            background: #00ffaa;
+            color: #000;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        
+        .error {
+            color: #ff4c4c;
+            margin-top: 1em;
+        }
+        
+        .flag {
+            margin-top: 1em;
+            background: #111;
+            padding: 1em;
+            border-radius: 6px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>🔐 Enter 20-Digit PIN</h2>
+        <form method="post">
+            <input type="text" name="pin" placeholder="20-digit PIN" maxlength="20" required>
+            <button type="submit">Submit</button>
+        </form>
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %} {% if flag %}
+        <div class="flag">{{ flag }}</div>
+        {% endif %}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SecureLayer7 Web CTF</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(-45deg, #0e0e0e, #1a1a1a, #141414, #111111);
+            background-size: 300% 300%;
+            animation: gradientBG 18s ease infinite;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 620px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+        }
+        
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 24px;
+            font-weight: 600;
+            color: #00ffaa;
+        }
+        
+        .rules {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .rules li {
+            margin: 12px 0;
+            font-size: 1em;
+            padding-left: 1.5em;
+            position: relative;
+        }
+        
+        .rules li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #00ffaa;
+        }
+        
+        .hint {
+            margin-top: 28px;
+            font-style: italic;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🚩 Welcome to Beep Web CTF</h1>
+        <ul class="rules">
+            <li>Access via <strong>Securelayer7 VPN</strong></li>
+            <li>Prefer <strong>Default Wordlist</strong></li>
+            <li>Share the <strong>flag personally</strong></li>
+            <li><strong>Don't Bruteforce</strong></li>
+        </ul>
+        <p class="hint" hidden="true">🔊 Explore the site. Maybe you hear some beep?</p>
+    </div>
+</body>
+
+</html>
