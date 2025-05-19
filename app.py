@@ -3,8 +3,7 @@ import os
 
 app = Flask(__name__)
 
-# Allow only these IPs (VPN IPs for example)
-ALLOWED_IPS = ['45.252.74.134','192.168.0.117']
+
 
 # Your secret 20-digit PIN (example)
 SECRET_PIN = "12345678901234567890"  # Replace with actual secret PIN
